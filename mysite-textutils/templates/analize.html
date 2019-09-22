@@ -51,7 +51,7 @@
     {% if analized_text != "" and not purpose.0 == "Charecter Count" %}
     <p class="lead">Analized text is - <pre>{{ analized_text }}</pre></p>
     {% elif purpose.0 == "Charecter Count" %}
-    <p class="lead">Given Text : {{text}}</p>
+    <p class="lead">Given Text : <pre>{{text}}</pre></p>
     <p class="lead">Charecter Count = {{analized_text}}</p>
     {% else %}
     <p class="lead">You didn't provide any text.</p>

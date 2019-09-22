@@ -44,11 +44,9 @@ def analize(request):
 
     if(is_spaceremove == "on"):
         analized = ""
-        for index,char in enumerate(djtext):
-            if djtext[index] == " " and djtext[index+1] == " ":
-                pass
-            else:
-                analized = analized + char
+        analized = " ".join(djtext.split())
+        print("djtext ", djtext)
+        print("analized ",analized)
         purpose.append("Remove Space")
         djtext = analized
 
