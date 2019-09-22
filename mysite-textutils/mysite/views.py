@@ -57,9 +57,9 @@ def analize(request):
         for char in djtext:
             count = count + 1
         purpose.append("Charecter Count")
-        params = {'purpose':'Charecter Count','analized_text':count}
+        params = {'purpose':purpose,'analized_text':count,'text':djtext}
 
-    if(is_rem_pun!="on" and is_fullcaps!="on" and is_charcount!="on" and is_newlineremove!="on"):
+    if(is_rem_pun!="on" and is_fullcaps!="on" and is_charcount!="on" and is_newlineremove!="on" and is_spaceremove!="on"):
         return HttpResponse("You didn't check the checkbox!")
 
     if is_charcount != "on":
